@@ -1,6 +1,6 @@
 /**
  * @file Creates an array of shuffled values.
- * @version 1.0.0
+ * @version 1.1.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -10,12 +10,11 @@
 'use strict';
 
 var slice = require('array-slice-x');
-var isString = require('is-string');
 
 var $shuffle = function shuffle(array) {
-  var obj = isString(array) ? array.split('') : slice(array);
+  var obj = slice(array);
   var i = obj.length;
-  while (i) {
+  while (i > 0) {
     var rnd = Math.floor(Math.random() * i);
     i -= 1;
     var tmp = obj[i];

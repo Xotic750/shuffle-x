@@ -1,6 +1,6 @@
 {
   "name": "shuffle-x",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Creates an array of shuffled values.",
   "homepage": "https://github.com/Xotic750/shuffle-x",
   "author": {
@@ -9,7 +9,8 @@
   },
   "copyright": "Copyright (c) 2017",
   "keywords": [
-    "Boilerplate",
+    "Array",
+    "shuffle",
     "module",
     "javascript",
     "nodejs",
@@ -28,8 +29,7 @@
     "url": "https://github.com/Xotic750/shuffle-x/issues"
   },
   "dependencies": {
-    "array-slice-x": "^1.2.0",
-    "is-string": "^1.0.4"
+    "array-slice-x": "^1.2.0"
   },
   "devDependencies": {
     "@xotic750/eslint-config-standard-x": "^2.2.1",
