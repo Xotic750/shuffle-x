@@ -1,6 +1,6 @@
 /**
  * @file Creates an array of shuffled values.
- * @version 1.1.0
+ * @version 1.2.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -9,20 +9,22 @@
 
 'use strict';
 
+var toObject = require('to-object-x');
 var slice = require('array-slice-x');
 
 var $shuffle = function shuffle(array) {
-  var obj = slice(array);
-  var i = obj.length;
-  while (i > 0) {
-    var rnd = Math.floor(Math.random() * i);
-    i -= 1;
-    var tmp = obj[i];
-    obj[i] = obj[rnd];
-    obj[rnd] = tmp;
+  var object = toObject(array);
+  var arr = slice(object);
+  var index = arr.length;
+  while (index > 0) {
+    var rnd = Math.floor(Math.random() * index);
+    index -= 1;
+    var tmp = arr[index];
+    arr[index] = arr[rnd];
+    arr[rnd] = tmp;
   }
 
-  return obj;
+  return arr;
 };
 
 /**
@@ -30,6 +32,7 @@ var $shuffle = function shuffle(array) {
  *
  * @see {@link https://en.wikipedia.org/wiki/Fisher-Yates_shuffle}
  * @param {Array|Object} array The array to shuffle.
+ * @throws {TypeError} If array is null or undefined.
  * @returns {Array} Returns the new shuffled array.
  * @example
  * var shuffle = require('shuffle-x');

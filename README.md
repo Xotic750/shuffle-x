@@ -23,7 +23,7 @@
 ## shuffle-x
 Creates an array of shuffled values.
 
-**Version**: 1.1.0  
+**Version**: 1.2.0  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
@@ -34,6 +34,10 @@ Creates an array of shuffled values.
 
 **Kind**: Exported member  
 **Returns**: <code>Array</code> - Returns the new shuffled array.  
+**Throws**:
+
+- <code>TypeError</code> If array is null or undefined.
+
 **See**: [https://en.wikipedia.org/wiki/Fisher-Yates_shuffle](https://en.wikipedia.org/wiki/Fisher-Yates_shuffle)  
 
 | Param | Type | Description |
