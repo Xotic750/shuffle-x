@@ -23,16 +23,16 @@
 ## shuffle-x
 Creates an array of shuffled values.
 
-**Version**: 1.3.0  
+**Version**: 1.4.0  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
 <a name="exp_module_shuffle-x--module.exports"></a>
 
-### `module.exports` ⇒ <code>Array</code> ⏏
+### `module.exports(array)` ⇒ <code>Array</code> ⏏
 Creates an array of shuffled values.
 
-**Kind**: Exported member  
+**Kind**: Exported function  
 **Returns**: <code>Array</code> - Returns the new shuffled array.  
 **Throws**:
 
