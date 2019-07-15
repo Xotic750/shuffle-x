@@ -21,15 +21,13 @@
 <a name="module_shuffle-x"></a>
 
 ## shuffle-x
+
 Creates an array of shuffled values.
 
-**Version**: 1.4.0  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_shuffle-x--module.exports"></a>
 
 ### `module.exports(array)` ⇒ <code>Array</code> ⏏
+
 Creates an array of shuffled values.
 
 **Kind**: Exported function  
@@ -38,15 +36,16 @@ Creates an array of shuffled values.
 
 - <code>TypeError</code> If array is null or undefined.
 
-**See**: [https://en.wikipedia.org/wiki/Fisher-Yates_shuffle](https://en.wikipedia.org/wiki/Fisher-Yates_shuffle)  
+**See**: [https://en.wikipedia.org/wiki/Fisher-Yates_shuffle](https://en.wikipedia.org/wiki/Fisher-Yates_shuffle)
 
-| Param | Type | Description |
-| --- | --- | --- |
+| Param | Type                                      | Description           |
+| ----- | ----------------------------------------- | --------------------- |
 | array | <code>Array</code> \| <code>Object</code> | The array to shuffle. |
 
-**Example**  
-```js
-var shuffle = require('shuffle-x');
+**Example**
 
-shuffle([1, 2, 3, 4]); // => [4, 1, 3, 2]
+```js
+import shuffle from 'shuffle-x';
+
+console.log(shuffle([1, 2, 3, 4])); // e.g. [4, 1, 3, 2]
 ```

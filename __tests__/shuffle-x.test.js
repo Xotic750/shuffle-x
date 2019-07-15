@@ -1,33 +1,11 @@
-let shuffle;
-
-if (typeof module === 'object' && module.exports) {
-  require('es5-shim');
-  require('es5-shim/es5-sham');
-
-  if (typeof JSON === 'undefined') {
-    JSON = {};
-  }
-
-  require('json3').runInContext(null, JSON);
-  require('es6-shim');
-  const es7 = require('es7-shim');
-  Object.keys(es7).forEach(function(key) {
-    const obj = es7[key];
-
-    if (typeof obj.shim === 'function') {
-      obj.shim();
-    }
-  });
-  shuffle = require('../../index.js');
-} else {
-  shuffle = returnExports;
-}
+import shuffle from '../src/shuffle-x';
 
 describe('shuffle', function() {
   let array;
   let object;
   let string;
 
+  /* eslint-disable-next-line jest/no-hooks */
   beforeEach(function() {
     array = [1, 2, 3];
     object = {
@@ -40,28 +18,33 @@ describe('shuffle', function() {
   });
 
   it('is a function', function() {
+    expect.assertions(1);
     expect(typeof shuffle).toBe('function');
   });
 
   it('should throw when target is null or undefined', function() {
+    expect.assertions(3);
     expect(function() {
       shuffle();
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
+      /* eslint-disable-next-line no-void */
       shuffle(void 0);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
       shuffle(null);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
   });
 
   it('should return a new array', function() {
+    expect.assertions(1);
     expect(shuffle(array)).not.toBe(array);
   });
 
   it('should contain the same elements after a collection is shuffled', function() {
+    expect.assertions(3);
     expect(shuffle(array).sort()).toStrictEqual(array);
     expect(shuffle(object).sort()).toStrictEqual(array);
     expect(
@@ -74,6 +57,7 @@ describe('shuffle', function() {
   });
 
   it('should shuffle small collections', function() {
+    expect.assertions(1);
     const actual = new Array(1000)
       .fill()
       .map(function() {
@@ -94,6 +78,7 @@ describe('shuffle', function() {
   });
 
   it('should treat number values for `collection` as empty', function() {
+    expect.assertions(1);
     expect(shuffle(1)).toStrictEqual([]);
   });
 });
