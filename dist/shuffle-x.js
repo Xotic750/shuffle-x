@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-15T07:55:54.930Z",
+  "date": "2019-07-15T10:58:32.753Z",
   "describe": "",
   "description": "Creates an array of shuffled values.",
   "file": "shuffle-x.js",
-  "hash": "a16902eef39d6dd82a6d",
+  "hash": "66090536ff049a7f0caf",
   "license": "MIT",
-  "version": "2.0.0"
+  "version": "2.0.1"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -443,7 +443,7 @@ module.exports = function hasSymbols() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/to-object-x/node_modules/is-nil-x/dist/is-nil-x.esm.js
+// CONCATENATED MODULE: ./node_modules/is-nil-x/dist/is-nil-x.esm.js
 /**
  * Checks if `value` is `null` or `undefined`.
  *
@@ -456,7 +456,7 @@ function isNil(value) {
 }
 
 
-// CONCATENATED MODULE: ./node_modules/to-object-x/node_modules/require-object-coercible-x/dist/require-object-coercible-x.esm.js
+// CONCATENATED MODULE: ./node_modules/require-object-coercible-x/dist/require-object-coercible-x.esm.js
 
 /**
  * The abstract operation RequireObjectCoercible throws an error if argument
@@ -665,39 +665,6 @@ function isFalsey(value) {
 is_symbol_default()(Symbol.toStringTag));
 
 
-// CONCATENATED MODULE: ./node_modules/is-nil-x/dist/is-nil-x.esm.js
-/**
- * Checks if `value` is `null` or `undefined`.
- *
- * @param {*} [value] - The value to check.
- * @returns {boolean} Returns `true` if `value` is nullish, else `false`.
- */
-function is_nil_x_esm_isNil(value) {
-  /* eslint-disable-next-line lodash/prefer-is-nil */
-  return value === null || typeof value === 'undefined';
-}
-
-
-// CONCATENATED MODULE: ./node_modules/require-object-coercible-x/dist/require-object-coercible-x.esm.js
-
-/**
- * The abstract operation RequireObjectCoercible throws an error if argument
- * is a value that cannot be converted to an Object using ToObject.
- *
- * @param {*} [value] - The `value` to check.
- * @throws {TypeError} If `value` is a `null` or `undefined`.
- * @returns {string} The `value`.
- */
-
-function require_object_coercible_x_esm_requireObjectCoercible(value) {
-  if (is_nil_x_esm_isNil(value)) {
-    throw new TypeError("Cannot call method on ".concat(value));
-  }
-
-  return value;
-}
-
-
 // CONCATENATED MODULE: ./node_modules/to-string-x/dist/to-string-x.esm.js
 
 var ERROR_MESSAGE = 'Cannot convert a Symbol value to a string';
@@ -731,7 +698,7 @@ function ToString(value) {
  */
 
 function requireCoercibleToString(value) {
-  return ToString(require_object_coercible_x_esm_requireObjectCoercible(value));
+  return ToString(requireObjectCoercible(value));
 }
 
 
@@ -1316,7 +1283,7 @@ var orderLength = 2;
  */
 
 var ordinaryToPrimitive = function _ordinaryToPrimitive(ordinary, hint) {
-  require_object_coercible_x_esm_requireObjectCoercible(ordinary);
+  requireObjectCoercible(ordinary);
 
   if (typeof hint !== 'string' || hint !== NUMBER && hint !== STRING) {
     throw new TypeError('hint must be "string" or "number"');
@@ -1350,7 +1317,7 @@ var ordinaryToPrimitive = function _ordinaryToPrimitive(ordinary, hint) {
 var getMethod = function _getMethod(object, property) {
   var func = object[property];
 
-  if (is_nil_x_esm_isNil(func) === false) {
+  if (isNil(func) === false) {
     if (isFunction(func) === false) {
       throw new TypeError("".concat(func, " returned for property ").concat(property, " of object ").concat(object, " is not a function"));
     }
