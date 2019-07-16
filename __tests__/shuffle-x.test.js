@@ -5,7 +5,6 @@ describe('shuffle', function() {
   let object;
   let string;
 
-  /* eslint-disable-next-line jest/no-hooks */
   beforeEach(function() {
     array = [1, 2, 3];
     object = {
@@ -29,7 +28,6 @@ describe('shuffle', function() {
     }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
-      /* eslint-disable-next-line no-void */
       shuffle(void 0);
     }).toThrowErrorMatchingSnapshot();
 
