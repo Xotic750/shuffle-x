@@ -9,7 +9,7 @@ import slice from 'array-slice-x';
  * @throws {TypeError} If array is null or undefined.
  * @returns {Array} Returns the new shuffled array.
  */
-export default function shuffle(array) {
+const shuffle = function shuffle(array) {
   const arr = slice(toObject(array));
   let index = arr.length;
 
@@ -22,4 +22,6 @@ export default function shuffle(array) {
   }
 
   return arr;
-}
+};
+
+export default shuffle;

@@ -9,7 +9,7 @@ import slice from 'array-slice-x';
  * @returns {Array} Returns the new shuffled array.
  */
 
-export default function shuffle(array) {
+var shuffle = function shuffle(array) {
   var arr = slice(toObject(array));
   var index = arr.length;
 
@@ -22,6 +22,8 @@ export default function shuffle(array) {
   }
 
   return arr;
-}
+};
+
+export default shuffle;
 
 //# sourceMappingURL=shuffle-x.esm.js.map
