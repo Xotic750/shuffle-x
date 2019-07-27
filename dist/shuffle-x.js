@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-27T14:02:11.323Z",
+  "date": "2019-07-27T14:18:48.622Z",
   "describe": "",
   "description": "Creates an array of shuffled values.",
   "file": "shuffle-x.js",
-  "hash": "216f3f9af71dc81dd8a4",
+  "hash": "209712297bcdd51e9bb8",
   "license": "MIT",
-  "version": "2.0.21"
+  "version": "2.0.22"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -1379,8 +1379,6 @@ var binaryRadix = 2;
 var octalRadix = 8;
 var testCharsCount = 2;
 var to_number_x_esm_ERROR_MESSAGE = 'Cannot convert a Symbol value to a number';
-/** @type {NumberConstructor} */
-
 var to_number_x_esm_castNumber = testCharsCount.constructor;
 var pStrSlice = to_number_x_esm_ERROR_MESSAGE.slice;
 var binaryRegex = /^0b[01]+$/i;
