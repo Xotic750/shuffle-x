@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-27T14:18:48.622Z",
+  "date": "2019-07-27T21:34:56.874Z",
   "describe": "",
   "description": "Creates an array of shuffled values.",
   "file": "shuffle-x.js",
