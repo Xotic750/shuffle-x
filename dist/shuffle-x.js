@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-08-14T14:06:35.015Z",
+  "date": "2019-08-14T15:01:00.270Z",
   "describe": "",
   "description": "Creates an array of shuffled values.",
   "file": "shuffle-x.js",
   "hash": "3bed211afab29122e43d",
   "license": "MIT",
-  "version": "2.1.0"
+  "version": "2.2.0"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
