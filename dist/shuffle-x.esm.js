@@ -1,5 +1,7 @@
 import toObject from 'to-object-x';
 import slice from 'array-slice-x';
+var floor = Math.floor,
+    random = Math.random;
 /**
  * Creates an array of shuffled values.
  *
@@ -14,7 +16,7 @@ var shuffle = function shuffle(array) {
   var index = arr.length;
 
   while (index > 0) {
-    var rnd = Math.floor(Math.random() * index);
+    var rnd = floor(random() * index);
     index -= 1;
     var tmp = arr[index];
     arr[index] = arr[rnd];

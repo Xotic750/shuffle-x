@@ -1,6 +1,7 @@
 import toObject from 'to-object-x';
 import slice from 'array-slice-x';
 
+const {floor, random} = Math;
 /**
  * Creates an array of shuffled values.
  *
@@ -14,7 +15,7 @@ const shuffle = function shuffle(array) {
   let index = arr.length;
 
   while (index > 0) {
-    const rnd = Math.floor(Math.random() * index);
+    const rnd = floor(random() * index);
     index -= 1;
     const tmp = arr[index];
     arr[index] = arr[rnd];

@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-08-15T18:45:08.857Z",
+  "date": "2019-08-16T23:15:56.968Z",
   "describe": "",
   "description": "Creates an array of shuffled values.",
   "file": "shuffle-x.js",
-  "hash": "3bed211afab29122e43d",
+  "hash": "4ef7d6f60a1f3b9f20ca",
   "license": "MIT",
   "version": "2.2.0"
 }
@@ -1810,6 +1810,8 @@ var array_slice_x_esm_slice = function slice(array, start, end) {
 // CONCATENATED MODULE: ./dist/shuffle-x.esm.js
 
 
+var shuffle_x_esm_floor = Math.floor,
+    random = Math.random;
 /**
  * Creates an array of shuffled values.
  *
@@ -1824,7 +1826,7 @@ var shuffle_x_esm_shuffle = function shuffle(array) {
   var index = arr.length;
 
   while (index > 0) {
-    var rnd = Math.floor(Math.random() * index);
+    var rnd = shuffle_x_esm_floor(random() * index);
     index -= 1;
     var tmp = arr[index];
     arr[index] = arr[rnd];
